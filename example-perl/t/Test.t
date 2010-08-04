@@ -1,18 +1,17 @@
-# Before `make install' is performed this script should be runnable with
-# `make test'. After `make install' it should work as `perl Test.t'
-
-#########################
-
-# change 'tests => 1' to 'tests => last_test_to_print';
-
 use strict;
 use warnings;
 
-use Test::More tests => 1;
+use Test::More;
 BEGIN { use_ok('Test') };
 
-#########################
+my $int = Test::new_int(42);
+ok $int, 'made int';
+is $int->Test::get_text, '42', 'got int text';
 
-# Insert your test code below, the Test::More module is use()ed here so read
-# its man page ( perldoc Test::More ) for help writing this test script.
+my $str = Test::new_str("OH HAI");
+ok $str, 'made str';
+is $str->Test::get_text, 'OH HAI', 'got str text';
 
+# $str->Test::print_text;
+
+done_testing;
