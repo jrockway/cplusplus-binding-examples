@@ -1,0 +1,6 @@
+Revision history for Perl extension Test.
+
+0.01  Wed Aug  4 09:12:22 2010
+	- original version; created by h2xs 1.23 with options
+		libexample/test.h
+
