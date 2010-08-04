@@ -1,0 +1,13 @@
+name: Example
+build-type: Simple
+version: 1.0.0
+cabal-version: >= 1.8
+license: MIT
+
+executable example
+  build-depends: base >= 4
+  main-is: example.hs
+  hs-source-dirs: examplehs
+  include-dirs: libexample++, libexample
+  extra-lib-dirs: libexample++, libexample
+  extra-libraries: example++, example
